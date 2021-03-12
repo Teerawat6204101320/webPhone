@@ -1,32 +1,65 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="/">PHONE<span>STONE</span></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-lg-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/login">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/cart"
+                ><i class="fa fa-shopping-basket"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+     <router-view/>
   </div>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100&family=Poppins:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
+.navbar{
+  height: auto;
 }
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
+.navbar-brand {
   font-weight: bold;
-  color: #2c3e50;
+  font-family: "Kanit", sans-serif;
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.navbar-brand span {
+  background-color: rgb(255, 167, 4);
+  padding: 1px 3px;
+  border-radius: 2px;
+  color: black;
+}
+.nav-link {
+  font-weight: bold;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+.nav-item {
+  margin: 0 15px;
 }
 </style>
